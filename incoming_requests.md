@@ -8,12 +8,8 @@ This is the `Request` record state before the request is to be transmitted to th
     "RequestId": "fd60c580-aaa5-4319-9aba-9362cfee29ec",
     "EducationOrganizationId": "aba6d628-257d-4444-810f-2a9509161434",
     "Student": {
-        "OregonNexus.Broker.Connector.EdFiAlliance.EdFi.Student": {
-            "id": "000000",
-            "studentUniqueId": "0000000",
-            "firstName": "John",
-            "middleName": "T",
-            "lastSurname": "Doe"
+        "OregonNexus.Broker.Connector.Edupoint.Synergy.Student": {
+            "SisNumber": "000000"
         }
     },
     "RequestManifest": {
