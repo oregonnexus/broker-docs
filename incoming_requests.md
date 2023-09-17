@@ -1,51 +1,6 @@
 # Incoming Requests
 These are the requests the receiving school is making.
 
-## Persistence
-* Incoming requests are persisted in the `IncomingRequests` table.
-* Their counterpart in the sending school's broker are persisted in the `OutgoingRequests` table.
-
-From the perspective of the broker itself, records in the IncomingRequests table represent new students coming in and records in the OutgoingRequests table represent students that are leaving it.
-
-When the receiving records clerk makes the initial incoming request, that record is persisted in IncomingRequests. After the receiving school's broker transmits the request to the sending school's broker, the sending schoo's broker will persist the request in OutgoingRequests.
-
-## Data Model
-
-```mermaid
-erDiagram
-    Requests ||--|{ PayloadContents : has
-    Requests {
-        guid RequestId
-        guid EducationOrganizationId
-        text Student
-        text RequestManifest
-        guid RequestProcessUserId
-        datetime InitialRequestSentDate
-        text ResponseManifest
-        guid ResponseProcessUserId
-        enum RequestStatus
-    }
-    Requests ||--|{ Messages : create
-    Messages {
-    	guid MessageId
-    	guid RequestId
-    	enum RequestResponse
-    	datetime MessageTimestamp
-    	text MessageContents
-    	text TransmissionDetails
-    	enum MessageStatus
-    }
-    PayloadContents {
-        guid PayloadContentId
-        guid RequestId
-        enum RequestDirection
-        text ContentType
-        byte BlobContent
-        json JsonContent
-        xml XmlContent
-    }
-```
-
 ## Example Record Before Request Transmission
 This is the `Request` record state before the request is to be transmitted to the sending school.
 ```json
