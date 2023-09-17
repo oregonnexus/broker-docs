@@ -4,7 +4,8 @@ The Broker is software used to broker (think escrow for buying and selling house
 
 ## Table of Contents
 1. [Broker Concepts](concepts.md)
-2. [Incoming Requests](incoming_requests.md)
-3. Outgoing Requests
-4. Connectors
-5. Mappings
+2. [Requests](requests.md)
+  1. [Incoming Requests](incoming_requests.md)
+  2. Outgoing Requests
+3. Connectors
+4. Mappings
