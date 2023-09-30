@@ -5,7 +5,6 @@ Incoming and outgoing requests are persisted in the same tables.
 
 ```mermaid
 erDiagram
-    Requests ||--|{ PayloadContents : has
     Requests {
         guid RequestId
         guid EducationOrganizationId
@@ -27,6 +26,7 @@ erDiagram
     	text TransmissionDetails
     	enum MessageStatus
     }
+    Messages ||--|{ PayloadContents : contain
     PayloadContents {
         guid PayloadContentId
         guid RequestId
