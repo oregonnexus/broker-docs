@@ -1,5 +1,5 @@
 # Outgoing Requests
-These are the requests the sending school recevied.
+These are the requests the releasing school recevied.
 
 ## Example Record Before Request Transmission
 This is the `Request` record state before the response is to be transmitted to the requesting school.
